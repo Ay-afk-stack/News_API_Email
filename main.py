@@ -23,7 +23,7 @@ articles = news['articles']
 body = """Subject:Today's News\n"""
 
 # Writing data from the API to a text file
-for article in articles:
+for article in articles[:20]:
     if article['title'] is not None:
         body = body + article['title']+"\n"+article['description']+"\n"+ f"Read more at {article['url']} "+2*"\n"
 
